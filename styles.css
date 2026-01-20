@@ -1,0 +1,79 @@
+body {
+    font-family: Poppins, Arial;
+    text-align: center;
+    background: linear-gradient(135deg, #f5e6cc, #f9d8a8);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #5a3e2b;
+}
+
+/* ----- Card Box ----- */
+.card {
+    background: #ffffffee;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    box-shadow: 0 3px 6px #0001;
+}
+
+/* ----- Larger Dropdown ----- */
+select {
+    width: 95%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #8a5f3a;
+    background: #fff7ee;
+    color: #5a3e2b;
+    cursor: pointer;
+}
+
+/* ----- Inputs, Buttons, Textareas ----- */
+input, textarea, button {
+    width: 100%;
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ----- Buttons ----- */
+button {
+    background: #8a5f3a;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #724c2f;
+}
+
+/* ----- Output Box ----- */
+.output {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 8px;
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #111;
+}
+
+.hidden {
+    display: none;
+}
+#rout, #dout, #cout, #aout {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}

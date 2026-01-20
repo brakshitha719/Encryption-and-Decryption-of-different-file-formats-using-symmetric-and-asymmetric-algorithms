@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption & Decryption Tool</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+    <!-- JSEncrypt (RSA) -->
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt/bin/jsencrypt.min.js"></script>
+</head>
+
+<body>
+
+    <h1>🔐 Multi-Algorithm Encryption & Decryption</h1>
+
+    <!-- Algorithm Selector -->
+    <div class="select-box">
+        <select id="algoSelect" onchange="switchAlgo()">
+  <option value="none">-- Select Algorithm --</option>
+  <option value="aes">AES</option>
+  <option value="rsa">RSA</option>
+  <option value="des">DES</option>
+  <option value="caesar">Caesar Cipher</option>
+</select>
+
+    </div>
+
+
+    <!-- ----------------- CAESAR ----------------- -->
+    <div id="caesarBox" class="card hidden">
+        <h2>Caesar Cipher</h2>
+
+        <input id="cmsg" placeholder="Enter text">
+        <input id="cshift" type="number" placeholder="Shift">
+
+        <button onclick="cEnc()">Encrypt</button>
+        <button onclick="cDec()">Decrypt</button>
+
+        <p id="cout"></p>
+    </div>
+
+
+    <!-- ----------------- DES ----------------- -->
+    <div id="desBox" class="card hidden">
+        <h2>DES Encryption</h2>
+
+        <input id="dmsg" placeholder="Enter text">
+        <input id="dkey" placeholder="Enter key">
+
+        <button onclick="dEnc()">Encrypt</button>
+        <button onclick="dDec()">Decrypt</button>
+
+        <p id="dout"></p>
+    </div>
+
+
+    <!-- ----------------- AES FILE ----------------- -->
+    <div id="aesBox" class="card hidden">
+        <h2>AES File Encryption</h2>
+
+        <input id="akey" placeholder="Enter AES Key">
+        <input type="file" id="afile">
+
+        <button onclick="aEnc()">Encrypt File</button>
+        <button onclick="aDec()">Decrypt File</button>
+
+        <p id="aout"></p>
+    </div>
+
+
+    <!-- ----------------- RSA ----------------- -->
+    <div id="rsaBox" class="card hidden">
+        <h2>RSA Encryption</h2>
+
+        <button onclick="genRSA()">Generate RSA Keys</button>
+
+        <textarea id="pub" placeholder="Public Key"></textarea>
+        <textarea id="priv" placeholder="Private Key"></textarea>
+
+        <input id="rmsg" placeholder="Enter text">
+
+        <button onclick="rEnc()">Encrypt</button>
+        <button onclick="rDec()">Decrypt</button>
+
+        <p id="rout"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
